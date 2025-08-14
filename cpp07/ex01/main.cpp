@@ -7,11 +7,17 @@ void my_toupper(char& c)
 		c -= 32;
 }
 
+void print(const char& c)
+{
+	std::cout << c;
+}
+
 int main(void)
 {
 	char array[] = "heLlo";
 
 	iter(array, 5, my_toupper);
-	std::cout << array << std::endl;
+	iter(array, 5, print);
+	std::cout << std::endl;
 	return 0;
 }
